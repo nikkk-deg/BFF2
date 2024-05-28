@@ -1,7 +1,7 @@
 FROM node as builder
 
 # Create app directory
-WORKDIR /usr/src/app
+WORKDIR /usr/src/
 
 # Install app dependencies
 COPY package.json yarn.lock ./
