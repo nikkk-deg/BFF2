@@ -1,7 +1,7 @@
 FROM node as builder
 
 # Create app directory
-WORKDIR /usr/src
+WORKDIR /usr/src/app
 
 # Install app dependencies
 COPY package.json yarn.lock ./
@@ -18,7 +18,7 @@ ENV NODE_ENV production
 USER node
 
 # Create app directory
-WORKDIR /usr/src
+WORKDIR /usr/src/app
 
 # Install app dependencies
 COPY package.json yarn.lock ./
