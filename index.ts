@@ -7,7 +7,7 @@ const { MongoClient } = require("mongodb"); // конструктор клиен
 const client = new MongoClient(url); // создаем новый клиент для работы с базой
 client.connect(); // подключаемся к базе
 
-const port = process.env.PORT || 3009;
+const port = process.env.PORT || 3000;
 
 const HTTP_STATUSES = {
   OK_200: 200,
