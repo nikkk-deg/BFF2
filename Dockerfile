@@ -1,14 +1,13 @@
-# Use the official Node.js image as the base image
 FROM node:20
 
-# Set the working directory in the container
 WORKDIR /app
 
-# Copy the application files into the working directory
-COPY . /app
+COPY yarn.lock package.json ./
 
-# Install the application dependencies
-RUN yarn
+RUN yarn install
 
-# Define the entry point for the container
-CMD ["yarn", "start"]
+COPY . .
+
+EXPOSE 3000
+
+CMD ["yarn", "start", "--host", "0.0.0.0"]
